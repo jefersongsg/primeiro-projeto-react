@@ -46,7 +46,7 @@ export const InputLabel = styled.p`
   font-weight:bold;
   font-size:18px;
   line-height:22px;
-  color:#eeeeee;
+  color:#ffffff;
   border-radius:14px;
   margin-left: 25px;
 `;
@@ -70,8 +70,29 @@ export const Input = styled.input`
   line-height:28px;
 
   color:#ffffff;
+  
 `;
+export const InputNumber = styled.input`
+  background:rgba(225,255,255,0.25);
+  box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+  border-radius: 14px;
 
+  width:342px;
+  height:58px;
+  padding-left:25px;
+  margin-bottom:34px;
+
+  border:none;
+  outline:none;
+
+  font-style:normal;
+  font-weight:normal;
+  font-size:20px;
+  line-height:28px;
+
+  color:#ffffff;
+  
+`
 export const Button = styled.button`
 
   width:342px;
@@ -103,6 +124,39 @@ export const Button = styled.button`
     opacity:0.5;
   }
 `;
+export const User = styled.li`
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+  margin-top:20px;
+  gap:15px;
+
+  background:rgba(225,255,255,0.25);
+  box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+  border-radius: 14px;
+
+  width:342px;
+  height:58px;
+
+  border:none;
+  outline:none;
+
+p {
+  font-style:normal;
+  font-weight:bold;
+  font-size:20px;
+  line-height:28px;
+  color:#eeeeee;
+
+}
+button{
+
+  background:none ;
+  border:none ;
+  cursor:pointer;
+
+}
+`
 
 
 

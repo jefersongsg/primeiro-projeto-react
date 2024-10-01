@@ -5,9 +5,16 @@ import People from './assets/people.svg'
 
 import Seta from './assets/arrow.png'
 
-import { Container, H1, Image, Input, InputLabel, Button, ContainerItens } from './styles';
+import Clear from './assets/18297 4.svg'
+
+import { Container, H1, Image, Input, InputLabel, Button, ContainerItens, User, InputNumber } from './styles';
 
 const App = () => {
+
+  const users = [
+    {id:Math.random(),name:"Jeferson",age:28},
+    {id:Math.random(),name:"Maria",age:38},
+  ];
 
   return (
 
@@ -21,9 +28,19 @@ const App = () => {
       <Input placeholder='Nome' />
 
       <InputLabel>Idade</InputLabel>
-      <Input placeholder='Idade' />
+      <InputNumber placeholder='Idade' type='number'/>
 
-      <Button>Cadastrar<img alt='Seta'src={Seta}/></Button>
+      <Button>Cadastrar<img alt='Seta'src={Seta}/>
+      </Button>
+
+      <ul>
+        {users.map((user) => (
+        <User key={user.id} >
+         <p>{user.name}</p>  <p>{user.age}</p>
+         <button><img src={Clear} alt="clear-user" /></button>
+        </User> 
+        ))}
+      </ul>
 
       </ContainerItens >
     </Container>
