@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import backgoud from "./assets/background.jpg"
+import backgoud from "../../assets/bg image.svg"
+
 
 export const Container = styled.div`
   background: url("${backgoud}");
@@ -9,11 +10,12 @@ export const Container = styled.div`
   align-items: center;
   gap: 40px; 
 
-  height:100vh;
+  height:100%;
+  min-height:100vh;
 
 `;
 export const Image = styled.img`
-  margin-top:30px;
+  margin:80px 50px ;
 `;
 export const ContainerItens = styled.div`
   background: linear-gradient(157.44deg,
@@ -21,6 +23,7 @@ export const ContainerItens = styled.div`
   rgba(255, 255, 255, 0.6) 0.85%,
   rgba(255, 255, 255, 0.15) 100%
 );
+  backdrop-filter:blur(45px);
   border-radius:61px 61px 0px 0px;
 
   padding:50px 36px;
@@ -28,6 +31,7 @@ export const ContainerItens = styled.div`
   flex-direction:column;
 
   height:100vh;
+  min-height: calc(100vh -180px);
 `;
 
 export const H1 = styled.h1` 
@@ -38,73 +42,21 @@ export const H1 = styled.h1`
   text-align: center;
   color:#ffffff;
   margin-bottom: 80px;
-`;
-
-export const InputLabel = styled.p`
-  letter-spacing: -0.408px;
-  font-style:normal;
-  font-weight:bold;
-  font-size:18px;
-  line-height:22px;
-  color:#ffffff;
-  border-radius:14px;
-  margin-left: 25px;
-`;
-
-export const Input = styled.input`
-  background:rgba(225,255,255,0.25);
-  box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
-  border-radius: 14px;
-
-  width:342px;
-  height:58px;
-  padding-left:25px;
-  margin-bottom:34px;
-
-  border:none;
-  outline:none;
-
-  font-style:normal;
-  font-weight:normal;
-  font-size:20px;
-  line-height:28px;
-
-  color:#ffffff;
-  
-`;
-export const InputNumber = styled.input`
-  background:rgba(225,255,255,0.25);
-  box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
-  border-radius: 14px;
-
-  width:342px;
-  height:58px;
-  padding-left:25px;
-  margin-bottom:34px;
-
-  border:none;
-  outline:none;
-
-  font-style:normal;
-  font-weight:normal;
-  font-size:20px;
-  line-height:28px;
-
-  color:#ffffff;
-  
 `
-export const Button = styled.button`
 
+export const Button = styled.button`
+  margin-top:100px;
   width:342px;
   height:74px;
 
-  background:rgba(0, 0, 0, 0.8);
+  background: transparent;
   border-radius:14px;
-  border: none;
+  border:1px solid #ffffff;
+  backdrop-filter:blur(10px);
 
   font-style:normal;
   font-weight:bold;
-  font-size:17px;
+  font-size:19px;
   line-height:28px;
 
   color:#ffffff;
@@ -115,7 +67,7 @@ export const Button = styled.button`
   align-items:center;
   justify-content:center;
   gap:20px;
-  img {transform:rotate(180deg); }
+  
 
   &:hover{
     opacity:0.8;
@@ -146,7 +98,7 @@ p {
   font-weight:bold;
   font-size:20px;
   line-height:28px;
-  color:#eeeeee;
+  color:#ffffffff;
 
 }
 button{
@@ -157,8 +109,3 @@ button{
 
 }
 `
-
-
-
-
-
