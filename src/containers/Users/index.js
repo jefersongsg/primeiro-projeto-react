@@ -1,5 +1,5 @@
 
-import React,{useState,useEffect} from 'react';
+import {useState,useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import axios from 'axios';
@@ -25,7 +25,7 @@ function Users() {
 
 useEffect(() => {
     const fetchUsers = async () => {
-    const {data:newUsers} = await axios.get("http://localhost:3001/users");
+    const {data:newUsers} = await axios.get("http://localhost:3000/users");
 
     setUsers(newUsers);
   }
@@ -35,7 +35,7 @@ useEffect(() => {
 
   const deleteUser = async (userId) => {
   
-  const newUsers = await axios.delete(`http://localhost:3001/users/${userId}`)
+  const newUsers = await axios.delete(`http://localhost:3000/users/${userId}`)
 
 
   setUsers(newUsers)

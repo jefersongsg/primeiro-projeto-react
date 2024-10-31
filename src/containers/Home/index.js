@@ -1,5 +1,5 @@
 
-import React,{useState, useRef} from 'react';
+import {useState, useRef} from 'react';
 import axios from 'axios';
 
 import { useNavigate } from 'react-router-dom';
@@ -26,7 +26,7 @@ import {
   const inputAge = useRef()
 
   const addNewUser = async () => {
-  const {data: newUser} = await axios.post("http://localhost:3001/users",{
+  const {data: newUser} = await axios.post("http://localhost:3000/users",{
     name:inputName.current.value,
     age: inputAge.current.value,
   })
